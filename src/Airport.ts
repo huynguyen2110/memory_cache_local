@@ -1,10 +1,10 @@
-import {MemoryCache} from "~/MemoryCache";
+import {IMemoryCache} from "~/IMemoryCache";
 import airports from "~/airports.json";
 
 export class Airport {
-  private memoryCache: MemoryCache;
+  private memoryCache: IMemoryCache;
   private TTL = 2;
-  constructor(memoryCache: MemoryCache) {
+  constructor(memoryCache: IMemoryCache) {
     this.memoryCache = memoryCache
   }
   getAirport(code: string) {
